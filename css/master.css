@@ -1,0 +1,132 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+/* Start Header */
+.header {
+    background-color: white;
+    box-shadow: 0 0 10px #DDD;
+    -webkit-box-shadow: 0 0 10px #DDD;
+    -moz-box-shadow: 0 0 10px #DDD;
+    position: relative;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header .container .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    height: 73.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header .container .main-nav {
+    display: flex;
+}
+
+.header .container .main-nav>li>a {
+    height: 73.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 0 30px;
+    position: relative;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    overflow: hidden;
+}
+
+.header .container .main-nav>li>a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.header .container .main-nav>li>a:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+
+.header .container .main-nav>li>a:hover::before {
+    left: 0;
+}
+
+/* End Header */
